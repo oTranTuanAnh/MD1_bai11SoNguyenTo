@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>btSoNguyenTo</title>
+</head>
+<body>
+<script>
+
+    let start = +prompt("Nhập số bắt đầu");
+    let num = +prompt("Nhập số lượng phần tử");
+    let i=1;
+
+   while (i<=num) {
+       if (isPrime(start)){
+           document.write(start+ "<br>");
+           i+=1;
+       }
+       start+=1;
+
+   }
+
+    function isPrime(n) {
+        let isPrime = true;
+        if (n < 2){
+            isPrime = false;
+        } else if (n>3) {
+            for (let i = 2; i < n; i++) {
+                if (n%i==0){
+                    isPrime = false;
+                }
+            }
+        }
+        return isPrime;
+    }
+
+
+
+</script>
+</body>
+</html>
